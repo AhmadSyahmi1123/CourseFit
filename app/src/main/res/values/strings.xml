@@ -3,5 +3,11 @@
     <string name="welcome_message">Welcome to CourseFit!</string>
     <string name="signupButtonText">Signup</string>
     <string name="loginButtonText">Login</string>
+    <string name="mainMenuText">Main Menu</string>
+    <string name="startButtonText">Start Assessment</string>
+    <string name="historyButtonText">History</string>
+    <string name="usernameHint">Username</string>
+    <string name="passwordHint">Password</string>
+    <string name="nextText">Next</string>
 
 </resources>
