@@ -6,21 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MainMenu extends AppCompatActivity {
+public class page_R extends AppCompatActivity {
 
-    public Button startButton;
+    public Button toPage_I_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_menu);
+        setContentView(R.layout.page_r);
 
-        startButton = findViewById(R.id.startButton);
+        toPage_I_Button = findViewById(R.id.toNextPhaseButton);
 
-        startButton.setOnClickListener(v -> {
+        //toPage_I_Button.setOnClickListener(v -> {
             // This method will be called when the button is clicked
-            Intent intent = new Intent(MainMenu.this, page_R.class);
-            startActivity(intent);
-        });
+            //Intent intent = new Intent(page_R.this, .class);
+            //startActivity(intent);
+        //});
     }
 }

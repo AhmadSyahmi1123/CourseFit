@@ -9,5 +9,8 @@
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
     <string name="nextText">Next</string>
+    <string name="tidakText">Tidak</string>
+    <string name="yaText">Ya</string>
+    <string name="submitText">Submit</string>
 
 </resources>
