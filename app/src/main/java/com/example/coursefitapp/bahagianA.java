@@ -2,18 +2,17 @@ package com.example.coursefitapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class page_R extends AppCompatActivity {
+public class bahagianA extends AppCompatActivity {
 
     public Button toPage_I_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page_r);
+        setContentView(R.layout.bahagian_a);
 
         toPage_I_Button = findViewById(R.id.toNextPhaseButton);
 

@@ -19,7 +19,7 @@ public class MainMenu extends AppCompatActivity {
 
         startButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
-            Intent intent = new Intent(MainMenu.this, page_R.class);
+            Intent intent = new Intent(MainMenu.this, bahagianA.class);
             startActivity(intent);
         });
     }

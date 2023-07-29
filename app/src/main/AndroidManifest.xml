@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CourseFitApp"
         tools:targetApi="31">
         <activity
-            android:name=".page_R"
+            android:name=".bahagianA"
             android:exported="false" />
         <activity
             android:name=".MainMenu"
