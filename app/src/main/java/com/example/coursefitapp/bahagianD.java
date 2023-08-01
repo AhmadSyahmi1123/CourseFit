@@ -10,15 +10,14 @@ import android.widget.RadioGroup;
 
 import java.lang.reflect.Field;
 
-public class bahagianA extends AppCompatActivity {
+public class bahagianD extends AppCompatActivity {
 
     public Button nextButton;
-    public static int r, i, a, s, e, k = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bahagian_a);
+        setContentView(R.layout.bahagian_d);
 
         RadioGroup soalan1 = findViewById(R.id.soalan1);
         RadioGroup soalan2 = findViewById(R.id.soalan2);
@@ -41,32 +40,32 @@ public class bahagianA extends AppCompatActivity {
         RadioGroup soalan19 = findViewById(R.id.soalan19);
         RadioGroup soalan20 = findViewById(R.id.soalan20);
 
-        setRadioGroupListener(soalan1, "r");
-        setRadioGroupListener(soalan2, "r");
-        setRadioGroupListener(soalan3, "r");
-        setRadioGroupListener(soalan4, "r");
-        setRadioGroupListener(soalan5, "r");
-        setRadioGroupListener(soalan6, "r");
-        setRadioGroupListener(soalan7, "r");
-        setRadioGroupListener(soalan8, "r");
-        setRadioGroupListener(soalan9, "r");
-        setRadioGroupListener(soalan10, "r");
-        setRadioGroupListener(soalan11, "r");
-        setRadioGroupListener(soalan12, "r");
-        setRadioGroupListener(soalan13, "r");
-        setRadioGroupListener(soalan14, "r");
-        setRadioGroupListener(soalan15, "r");
-        setRadioGroupListener(soalan16, "r");
-        setRadioGroupListener(soalan17, "r");
-        setRadioGroupListener(soalan18, "r");
-        setRadioGroupListener(soalan19, "r");
-        setRadioGroupListener(soalan20, "r");
+        setRadioGroupListener(soalan1, "s");
+        setRadioGroupListener(soalan2, "s");
+        setRadioGroupListener(soalan3, "s");
+        setRadioGroupListener(soalan4, "s");
+        setRadioGroupListener(soalan5, "s");
+        setRadioGroupListener(soalan6, "s");
+        setRadioGroupListener(soalan7, "s");
+        setRadioGroupListener(soalan8, "s");
+        setRadioGroupListener(soalan9, "s");
+        setRadioGroupListener(soalan10, "s");
+        setRadioGroupListener(soalan11, "s");
+        setRadioGroupListener(soalan12, "s");
+        setRadioGroupListener(soalan13, "s");
+        setRadioGroupListener(soalan14, "s");
+        setRadioGroupListener(soalan15, "s");
+        setRadioGroupListener(soalan16, "s");
+        setRadioGroupListener(soalan17, "s");
+        setRadioGroupListener(soalan18, "s");
+        setRadioGroupListener(soalan19, "s");
+        setRadioGroupListener(soalan20, "s");
 
         nextButton = findViewById(R.id.nextButton);
 
         nextButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
-            Intent intent = new Intent(bahagianA.this, bahagianB.class);
+            Intent intent = new Intent(bahagianD.this, bahagianE.class);
             startActivity(intent);
         });
     }

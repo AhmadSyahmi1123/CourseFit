@@ -8,6 +8,7 @@
     <string name="historyButtonText">History</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
+    <string name="emailHint">Email</string>
     <string name="nextText">Next</string>
     <string name="tidakText">Tidak</string>
     <string name="yaText">Ya</string>

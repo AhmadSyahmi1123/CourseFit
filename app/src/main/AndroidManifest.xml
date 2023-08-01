@@ -13,6 +13,24 @@
         android:theme="@style/Theme.CourseFitApp"
         tools:targetApi="31">
         <activity
+            android:name=".bahagianF"
+            android:exported="false" />
+        <activity
+            android:name=".bahagianE"
+            android:exported="false" />
+        <activity
+            android:name=".bahagianD"
+            android:exported="false" />
+        <activity
+            android:name=".bahagianC"
+            android:exported="false" />
+        <activity
+            android:name=".results"
+            android:exported="false" />
+        <activity
+            android:name=".bahagianB"
+            android:exported="false" />
+        <activity
             android:name=".bahagianA"
             android:exported="false" />
         <activity

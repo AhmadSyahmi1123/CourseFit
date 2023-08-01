@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Page untuk Bahagian Realistik -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -11,28 +12,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bahagian A: Kesukaan"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Arahan: Tandakan Ya pada perkara-perkara yang anda SUKA dan Tidak pada perkara-perkara
-yang anda TIDAK SUKA pada borang yang disediakan."
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
         <!-- Soalan 1 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belajar mata pelajaran Kemahiran Hidup"
+            android:text="Saintis"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -43,27 +27,25 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
                 android:text="@string/yaText"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
                 android:text="@string/tidakText"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:padding="8dp" />
         </RadioGroup>
 
         <!-- Soalan 2 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menonton rancangan ‘National Geographic’"
+            android:text="Ahli kaji bumi"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -74,7 +56,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -82,7 +63,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -94,7 +74,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaiki alat-alat elektronik"
+            android:text="Ahli kaji bintang / ahli astronomi"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -105,7 +85,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -113,7 +92,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -125,7 +103,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaiki perabot yang rosak"
+            android:text="Angkasawan"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -136,7 +114,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -144,7 +121,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -156,7 +132,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suasana yang tidak bising"
+            android:text="Pakar bedah"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -167,7 +143,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -175,7 +150,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -187,7 +161,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suasana zoo"
+            android:text="Pegawai penyiasat"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -198,7 +172,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -206,7 +179,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -218,7 +190,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menonton perlumbaan kereta lumba"
+            android:text="Ahli farmasi"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -229,7 +201,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -237,7 +208,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -249,7 +219,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kerja–kerja yang menggunakan peralatan"
+            android:text="Penyelidik sejarah / ahli arkeologi"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -260,7 +230,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -268,7 +237,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -280,7 +248,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berkebun"
+            android:text="Penganalisis ekonomi"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -291,7 +259,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -299,7 +266,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -311,7 +277,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membuat kerja tangan(kraftangan, anyaman,jahitan)"
+            android:text="Ahli forensik"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -322,7 +288,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/yaQ10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -330,7 +295,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
 
             <RadioButton
-                android:id="@+id/tidakQ10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
@@ -342,7 +306,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Petani moden"
+            android:text="Belajar mata pelajaran sains"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -353,7 +317,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -372,7 +335,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kontraktor binaan"
+            android:text="Membaca buku mengenai komputer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -401,7 +364,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juruterbang"
+            android:text="Mengetahui tentang planet – planet"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -430,7 +393,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jurutera"
+            android:text="Membaca buku – buku penyiasatan"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -459,7 +422,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pelumba Formula 1"
+            android:text="Bermain catur"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -488,7 +451,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juruteknik"
+            android:text="Mengetahui kandungan bahan dalam makanan"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -517,7 +480,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai perhutanan"
+            android:text="Mengkaji cara hidup kaum lain"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -542,11 +505,11 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
         </RadioGroup>
 
-        <!-- Soalan 8 -->
+        <!-- Soalan 18 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mekanik"
+            android:text="Menjalankan eksperimen Sains"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -557,7 +520,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -572,11 +534,11 @@ yang anda TIDAK SUKA pada borang yang disediakan."
                 android:padding="8dp" />
         </RadioGroup>
 
-        <!-- Soalan 9 -->
+        <!-- Soalan 19 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Arkitek"
+            android:text="Membaca peta"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -587,7 +549,6 @@ yang anda TIDAK SUKA pada borang yang disediakan."
             android:layout_height="wrap_content">
 
             <RadioButton
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
@@ -606,7 +567,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juru x-ray"
+            android:text="Melawat pameran sains"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
