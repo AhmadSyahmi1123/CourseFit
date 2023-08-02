@@ -13,5 +13,6 @@
     <string name="tidakText">Tidak</string>
     <string name="yaText">Ya</string>
     <string name="submitText">Submit</string>
+    <string name="resultsText">Results</string>
 
 </resources>
