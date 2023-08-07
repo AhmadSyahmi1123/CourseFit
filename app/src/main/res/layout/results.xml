@@ -18,13 +18,6 @@
             android:text="@string/resultsText"
             android:textSize="40sp" />
 
-        <!-- (Content) -->
-        <TextView
-            android:id="@+id/answerTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:visibility="gone"/>
     </LinearLayout>
 
     <!-- Scrollable Content -->
@@ -40,6 +33,12 @@
             android:orientation="vertical"
             android:padding="16dp">
             <!-- Add expandable items dynamically here -->
+            <TextView
+                android:id="@+id/answerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:visibility="gone"/>
         </LinearLayout>
     </ScrollView>
 

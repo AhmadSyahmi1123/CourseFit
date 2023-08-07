@@ -1,8 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.CourseFitApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="White.Theme.CourseFitApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/pastelGreenDark</item>
+        <item name="colorAccent">@color/pastelGreen</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/darkGray</item>
+
+        <!-- Customize button styles -->
+        <item name="android:buttonStyle">@style/Button.CourseFitApp</item>
+        <item name="toolbarStyle">@style/Toolbar.CourseFitApp</item>
+    </style>
+
+    <style name="Toolbar.CourseFitApp" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/pastelGreen</item>
+    </style>
+
+
+    <style name="Button.CourseFitApp" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="Theme.CourseFitApp" parent="Base.Theme.CourseFitApp" />
