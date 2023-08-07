@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "566706473589",
+    "firebase_url": "https://coursefit-e05ca-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "coursefit-e05ca",
+    "storage_bucket": "coursefit-e05ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566706473589:android:f16026d90600b27822463c",
+        "android_client_info": {
+          "package_name": "com.example.coursefitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566706473589-d32lmire0hbm0qvpqf1b8hhooe4pg7od.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWYRdu93PknsyD4GHP3XHm_OgPA0B-dUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566706473589-d32lmire0hbm0qvpqf1b8hhooe4pg7od.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
