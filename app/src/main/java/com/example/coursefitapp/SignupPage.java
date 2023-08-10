@@ -42,6 +42,7 @@ public class SignupPage extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
 
         nextButton.setEnabled(false);
+        nextButton.setBackgroundResource(R.drawable.disabled_button);
         username.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -107,6 +108,12 @@ public class SignupPage extends AppCompatActivity {
                     cond3 = true;
                 }
                 nextButton.setEnabled(cond1 && cond2 && cond3);
+                if(nextButton.isEnabled()){
+                    nextButton.setBackgroundResource(R.drawable.enabled_button);
+                }
+                else{
+                    nextButton.setBackgroundResource(R.drawable.disabled_button);
+                }
             }
         });
 

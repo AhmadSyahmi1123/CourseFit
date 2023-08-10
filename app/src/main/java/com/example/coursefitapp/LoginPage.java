@@ -16,6 +16,14 @@ public class LoginPage extends AppCompatActivity {
 
         nextButton = findViewById(R.id.nextButton);
 
+        //nextButton.setBackgroundResource(R.drawable.disabled_button);
+        //if(nextButton.isEnabled()){
+            //nextButton.setBackgroundResource(R.drawable.enabled_button);
+        //}
+        //else{
+            //nextButton.setBackgroundResource(R.drawable.disabled_button);
+        //}
+
         nextButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
             Intent intent = new Intent(LoginPage.this, MainMenu.class);
