@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belajar mata pelajaran matematik"
+            android:text="Belajar mata pelajaran matematik/Learn mathematics subjects"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menyusun barang dengan kemas dan teratur"
+            android:text="Menyusun barang dengan kemas dan teratur/Organize things neatly and orderly"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berpegang pada prinsip"
+            android:text="Berpegang pada prinsip/Stick with my principles"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -102,7 +102,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Melakukan tugasan mengikut jadual"
+            android:text="Melakukan tugasan mengikut jadual/Doing tasks according to a schedule"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -131,7 +131,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mengutamakan kekemasan diri"
+            android:text="Mengutamakan kekemasan diri/Prioritize self-tidy"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -160,7 +160,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Melakukan kerja yang sama berulang kali"
+            android:text="Melakukan kerja yang sama berulang kali/Doing the same tasks over and over again"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -189,7 +189,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mempertahankan pendapat saya"
+            android:text="Mempertahankan pendapat saya/Defending my view"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -218,7 +218,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menyiapkan tugasan tepat pada masanya"
+            android:text="Menyiapkan tugasan tepat pada masanya/Finishing tasks on time"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -247,7 +247,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Memendam perasaan"
+            android:text="Memendam perasaan/Suppress my feelings"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -276,7 +276,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mematuhi peraturan"
+            android:text="Mematuhi peraturan/Follow the rules"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -305,7 +305,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai bank"
+            android:text="Pegawai bank/Bank officer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -334,7 +334,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penyimpan kira-kira"
+            android:text="Penyimpan kira-kira/Bookkeeper"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -363,7 +363,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Akauntan"
+            android:text="Akauntan/Accountant"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -392,7 +392,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Setiausaha"
+            android:text="Setiausaha/Secretary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -421,7 +421,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juruaudit"
+            android:text="Juruaudit/Auditor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -450,7 +450,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengaturcara komputer"
+            android:text="Pengaturcara komputer/Computer Programmer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -479,7 +479,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai akaun"
+            android:text="Pegawai akaun/Account officer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -508,7 +508,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pustakawan"
+            android:text="Pustakawan/Librarian"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -537,7 +537,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penilai harta"
+            android:text="Penilai harta/Property appraiser"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -566,7 +566,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kerani"
+            android:text="Kerani/Clerk"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>

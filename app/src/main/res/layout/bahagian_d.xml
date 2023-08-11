@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menyertai aktiviti perkhemahan"
+            android:text="Menyertai aktiviti perkhemahan/Join camping activities"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membantu ibu bapa di rumah"
+            android:text="Membantu ibu bapa di rumah/Help parents with house chores"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menziarahi rakan-rakan yang ditimpa kesusahan"
+            android:text="Menziarahi rakan-rakan yang ditimpa kesusahan/Visiting friends who are in trouble"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -102,7 +102,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bekerja secara berkumpulan"
+            android:text="Bekerja secara berkumpulan/Work in a group"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -131,7 +131,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Memulakan perbualan apabila bertemu rakan – rakan"
+            android:text="Memulakan perbualan apabila bertemu rakan-rakan/Starts conversations when meeting friends"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -160,7 +160,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sedia mendengar masalah rakan-rakan"
+            android:text="Sedia mendengar masalah rakan-rakan/Always ready to listen to your friends problems"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -189,7 +189,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berkelah"
+            android:text="Berkelah/Picnic"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -218,7 +218,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berkongsi alat-alat tulis dengan rakan-rakan"
+            android:text="Berkongsi alat-alat tulis dengan rakan-rakan/Sharing my stationary with friends"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -247,7 +247,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berkongsi pendapat dengan orang lain"
+            android:text="Berkongsi pendapat dengan orang lain/Share my opinion with others"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -276,7 +276,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Memberikan nasihat"
+            android:text="Memberikan nasihat/Give advices"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -305,7 +305,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guru"
+            android:text="Guru/Teacher"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -334,7 +334,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kaunselor"
+            android:text="Kaunselor/Counselor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -363,7 +363,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jururawat"
+            android:text="Jururawat/Nurse"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -392,7 +392,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai sumber manusia"
+            android:text="Pegawai sumber manusia/Human resource officer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -421,7 +421,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pakar motivasi"
+            android:text="Pakar motivasi/Motivational speaker"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -450,7 +450,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai perhubungan awam"
+            android:text="Pegawai perhubungan awam/Public relations officer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -479,7 +479,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai kebajikan masyarakat"
+            android:text="Pegawai kebajikan masyarakat/Community welfare officer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -508,7 +508,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pensyarah"
+            android:text="Pensyarah/Lecturer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -537,7 +537,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wartawan"
+            android:text="Wartawan/News anchor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -566,7 +566,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pramugari / Pramugara"
+            android:text="Pramugari atau Pramugara/Flight attendant"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>

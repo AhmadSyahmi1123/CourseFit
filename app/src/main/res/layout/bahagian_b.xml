@@ -12,301 +12,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Soalan 1 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Saintis"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 2 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ahli kaji bumi"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 3 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ahli kaji bintang / ahli astronomi"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 4 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Angkasawan"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 5 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pakar bedah"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 6 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pegawai penyiasat"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 7 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ahli farmasi"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 8 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Penyelidik sejarah / ahli arkeologi"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 9 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Penganalisis ekonomi"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
-        <!-- Soalan 10 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ahli forensik"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/soalan10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/yaText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tidakText"
-                android:textSize="16sp"
-                android:padding="8dp" />
-        </RadioGroup>
-
         <!-- Soalan 11 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belajar mata pelajaran sains"
+            android:text="Belajar mata pelajaran sains/Learn Science subjects"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -335,7 +45,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaca buku mengenai komputer"
+            android:text="Membaca buku mengenai komputer/Read books about computers"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -364,7 +74,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mengetahui tentang planet – planet"
+            android:text="Mengetahui tentang planet-planet/Knowing about the planets"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -393,7 +103,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaca buku – buku penyiasatan"
+            android:text="Membaca buku-buku penyiasatan/Read investigations books"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -422,7 +132,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bermain catur"
+            android:text="Bermain catur/Play chess"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -451,7 +161,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mengetahui kandungan bahan dalam makanan"
+            android:text="Mengetahui kandungan bahan dalam makanan/Knowing the ingredients in food"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -480,7 +190,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mengkaji cara hidup kaum lain"
+            android:text="Mengkaji cara hidup kaum lain/Studying the way of life of other races"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -509,7 +219,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menjalankan eksperimen Sains"
+            android:text="Menjalankan eksperimen Sains/Conducting science experiments"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -538,7 +248,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaca peta"
+            android:text="Membaca peta/Read a map"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -567,13 +277,303 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Melawat pameran sains"
+            android:text="Melawat pameran sains/Go on a science fair"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
 
         <RadioGroup
             android:id="@+id/soalan20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saintis/Scientist"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ahli kaji bumi/Geologists"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ahli kaji bintang/Astronomer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 4 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Angkasawan/Astronaut"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 5 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pakar bedah/Surgeons"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 6 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pegawai penyiasat/Investogators"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 7 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ahli farmasi/Pharmacists"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 8 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ahli arkeologi/Archeologists"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 9 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penganalisis ekonomi/Economic Analysts"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yaText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tidakText"
+                android:textSize="16sp"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <!-- Soalan 10 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ahli forensik/Forensic experts"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/soalan10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 

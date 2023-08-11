@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Melukis"
+            android:text="Melukis/Drawing"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menyanyi"
+            android:text="Menyanyi/Singing"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -74,7 +74,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bermain alat muzik"
+            android:text="Bermain alat muzik/Play musical instruments"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -103,7 +103,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menghias rumah"
+            android:text="Menghias rumah/Decorate my house"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -132,7 +132,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berlakon drama"
+            android:text="Berlakon drama/Act in a drama"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -161,7 +161,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menghayati keindahan alam"
+            android:text="Menghayati keindahan alam/Appreciate the beauty of nature"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -190,7 +190,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mendengar lagu"
+            android:text="Mendengar lagu/Listening song"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -219,7 +219,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mengikuti perkembangan fesyen"
+            android:text="Mengikuti perkembangan fesyen/Following fashion trends"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -248,7 +248,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mengumpul setem"
+            android:text="Mengumpul setem/Collecting stems"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -277,7 +277,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Melakukan sesuatu dengan cara saya sendiri"
+            android:text="Melakukan sesuatu dengan cara saya sendiri/Doing stuff in my own way"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -306,7 +306,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penggubah lagu"
+            android:text="Penggubah lagu/Songwriter"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -335,7 +335,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penyanyi"
+            android:text="Penyanyi/Singer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -364,7 +364,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pelakon"
+            android:text="Pelakon/Actor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -393,7 +393,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penghias dalaman"
+            android:text="Penghias dalaman/Interior designer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -422,7 +422,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jurusolek / juruandaman"
+            android:text="Jurusolek/Makeup artists"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -451,7 +451,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pereka fesyen"
+            android:text="Pereka fesyen/Fashion designer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -480,7 +480,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pereka tari"
+            android:text="Pereka tari/Choreographer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -509,7 +509,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penulis lirik"
+            android:text="Penulis lirik/Lyricists"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -538,7 +538,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengarah filem"
+            android:text="Pengarah filem/Film director"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -567,7 +567,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pereka kraftangan"
+            android:text="Craft designer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>

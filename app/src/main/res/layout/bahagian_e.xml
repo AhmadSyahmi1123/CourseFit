@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menjadi usahawan"
+            android:text="Menjadi usahawan/Become an entrepreneur"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mempengaruhi rakan-rakan"
+            android:text="Mempengaruhi rakan-rakan/Have an influence over my friends"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Meningkatkan motivasi dalam melakukan sesuatu"
+            android:text="Meningkatkan motivasi dalam melakukan sesuatu/Increase my motivation in doing something"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -102,7 +102,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bersaing"
+            android:text="Bersaing/Compete"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -131,7 +131,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berucap di khalayak ramai"
+            android:text="Berucap di khalayak ramai/Public speaking"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -160,7 +160,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mencuba perkara-perkara baharu"
+            android:text="Mencuba perkara-perkara baharu/Trying new things"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -189,7 +189,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suasana yang ceria"
+            android:text="Suasana yang ceria/Cheerful environment"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -218,7 +218,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menerima pandangan orang lain"
+            android:text="Menerima pandangan orang lain/Accepting other people's views"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -247,7 +247,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menonjolkan kebolehan diri"
+            android:text="Menonjolkan kebolehan diri/Showing off my skills"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -276,7 +276,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bertugas di koperasi sekolah"
+            android:text="Bertugas di koperasi sekolah/Working in school's cooperative"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -306,7 +306,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peguam"
+            android:text="Peguam/Lawyer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -335,7 +335,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pakar perunding"
+            android:text="Pakar perunding/Negotiator"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -364,7 +364,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengurus bank"
+            android:text="Pengurus bank/Bank manager"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -393,7 +393,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengarah syarikat"
+            android:text="Pengarah syarikat/Director of a company"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -422,7 +422,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jurujual insurans"
+            android:text="Jurujual insurans/Insurance salesman"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -451,7 +451,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengurus restoran"
+            android:text="Pengurus restoran/Restaurant manager"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -480,7 +480,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengurus pemasaran"
+            android:text="Pengurus pemasaran/Marketing manager"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -509,7 +509,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ahli politik"
+            android:text="Ahli politik/Politicians"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -538,7 +538,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Penerbit rancangan televisyen"
+            android:text="Penerbit rancangan televisyen/Television show producer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -567,7 +567,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Usahawan"
+            android:text="Usahawan/Entrepreneur"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>

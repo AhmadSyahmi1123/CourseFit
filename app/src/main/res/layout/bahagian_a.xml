@@ -14,16 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bahagian A: Kesukaan"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="8dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Arahan: Tandakan Ya pada perkara-perkara yang anda SUKA dan Tidak pada perkara-perkara
-yang anda TIDAK SUKA pada borang yang disediakan."
+            android:text="Arahan: Tandakan Ya pada perkara-perkara yang anda SUKA dan Tidak pada perkara-perkara yang anda TIDAK SUKA pada borang yang disediakan./Mark Ya on the things you LIKE and Tidak on the things you DON'T LIKE on the form provided."
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -32,7 +23,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belajar mata pelajaran Kemahiran Hidup"
+            android:text="Belajar mata pelajaran Kemahiran Hidup/Learn Life Skills subjects"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -63,7 +54,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menonton rancangan ‘National Geographic’"
+            android:text="Menonton rancangan ‘National Geographic’/Watching the 'National Geographic' show"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -94,7 +85,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaiki alat-alat elektronik"
+            android:text="Membaiki alat-alat elektronik/Repairing electronic devices"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -125,7 +116,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membaiki perabot yang rosak"
+            android:text="Membaiki perabot yang rosak/Repair damaged furniture"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -156,7 +147,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suasana yang tidak bising"
+            android:text="Suasana yang tidak bising/A quiet environment"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -187,7 +178,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suasana zoo"
+            android:text="Suasana zoo/Zoo atmosphere or environment"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -218,7 +209,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menonton perlumbaan kereta lumba"
+            android:text="Menonton perlumbaan kereta lumba/Watching a race car race"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -249,7 +240,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kerja–kerja yang menggunakan peralatan"
+            android:text="Kerja–kerja yang menggunakan peralatan/Works that use equipment"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -280,7 +271,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Berkebun"
+            android:text="Berkebun/Farming"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -311,7 +302,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membuat kerja tangan(kraftangan, anyaman,jahitan)"
+            android:text="Membuat kerja tangan(kraftangan,anyaman,jahitan)/Making handicrafts (handicrafts, weaving, sewing)"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -342,7 +333,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Petani moden"
+            android:text="Petani moden/Modern farmer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -372,7 +363,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kontraktor binaan"
+            android:text="Kontraktor binaan/Construction contractor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -401,7 +392,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juruterbang"
+            android:text="Juruterbang/Pilot"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -430,7 +421,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jurutera"
+            android:text="Jurutera/Engineer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -459,7 +450,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pelumba Formula 1"
+            android:text="Pelumba Formula 1/Formula 1 Racer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -488,7 +479,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juruteknik"
+            android:text="Juruteknik/Technician"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -517,7 +508,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pegawai perhutanan"
+            android:text="Pegawai perhutanan/Forestry officer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -546,7 +537,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mekanik"
+            android:text="Mekanik/Mechanic"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -576,7 +567,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Arkitek"
+            android:text="Arkitek/Architect"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>
@@ -606,7 +597,7 @@ yang anda TIDAK SUKA pada borang yang disediakan."
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juru x-ray"
+            android:text="Juru x-ray/Radiographer"
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"/>

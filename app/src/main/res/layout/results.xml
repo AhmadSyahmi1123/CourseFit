@@ -2,23 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <!-- Header -->
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:layout_margin="20dp">
 
         <TextView
-            android:id="@+id/questionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/resultsText"
-            android:textSize="40sp" />
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <!-- Scrollable Content -->
     <ScrollView
@@ -32,13 +36,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Add expandable items dynamically here -->
+
             <TextView
-                android:id="@+id/answerTextView"
+                android:id="@+id/resultSummaryText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:visibility="gone"/>
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
         </LinearLayout>
     </ScrollView>
 
