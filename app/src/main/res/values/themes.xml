@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="White.Theme.CourseFitApp" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="White.Theme.CourseFitApp" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/pastelGreenDark</item>
         <item name="colorAccent">@color/pastelGreen</item>
