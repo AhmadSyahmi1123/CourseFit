@@ -31,9 +31,6 @@ public class results extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
 
-        TextView summary = findViewById(R.id.resultSummaryText);
-        summary.setText("Tahniah!\n\nBerdasarkan hasil ujian anda, berikut merupakan kursus-kursus yang sesuai dengan anda:\n\nCongratulations!\n\nBased on your assessment, these are the courses that would fit you:");
-
         // Get the container layout
         LinearLayout container = findViewById(R.id.container);
 
@@ -54,7 +51,7 @@ public class results extends AppCompatActivity {
         Collections.sort(entryList, (entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
 
         // Get the top N highest numbers
-        int topN = 6;
+        int topN = 3;
         List<String> topNKeys = new ArrayList<>();
         for (int i = 0; i < Math.min(topN, entryList.size()); i++) {
             topNKeys.add(entryList.get(i).getKey());

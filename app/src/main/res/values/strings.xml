@@ -2,7 +2,7 @@
     <string name="app_name">CourseFitApp</string>
     <string name="welcome_message">Welcome to \nCourseFit!</string>
     <string name="signupButtonText">Sign Up</string>
-    <string name="loginButtonText">Log In</string>
+    <string name="signinButtonText">Sign In</string>
     <string name="mainMenuText">Main Menu</string>
     <string name="startButtonText">Start Assessment</string>
     <string name="historyButtonText">History</string>

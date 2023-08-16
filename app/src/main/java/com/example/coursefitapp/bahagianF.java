@@ -9,15 +9,22 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
 
 public class bahagianF extends AppCompatActivity {
 
     public Button submitButton;
+    boolean[] isQuestionAnswered = new boolean[20]; // Assuming you have 20 questions
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bahagian_f);
+
+        // Initialize the array to false values
+        for (int i = 0; i < isQuestionAnswered.length; i++) {
+            isQuestionAnswered[i] = false;
+        }
 
         RadioGroup soalan1 = findViewById(R.id.soalan1);
         RadioGroup soalan2 = findViewById(R.id.soalan2);
@@ -40,28 +47,30 @@ public class bahagianF extends AppCompatActivity {
         RadioGroup soalan19 = findViewById(R.id.soalan19);
         RadioGroup soalan20 = findViewById(R.id.soalan20);
 
-        setRadioGroupListener(soalan1, "k");
-        setRadioGroupListener(soalan2, "k");
-        setRadioGroupListener(soalan3, "k");
-        setRadioGroupListener(soalan4, "k");
-        setRadioGroupListener(soalan5, "k");
-        setRadioGroupListener(soalan6, "k");
-        setRadioGroupListener(soalan7, "k");
-        setRadioGroupListener(soalan8, "k");
-        setRadioGroupListener(soalan9, "k");
-        setRadioGroupListener(soalan10, "k");
-        setRadioGroupListener(soalan11, "k");
-        setRadioGroupListener(soalan12, "k");
-        setRadioGroupListener(soalan13, "k");
-        setRadioGroupListener(soalan14, "k");
-        setRadioGroupListener(soalan15, "k");
-        setRadioGroupListener(soalan16, "k");
-        setRadioGroupListener(soalan17, "k");
-        setRadioGroupListener(soalan18, "k");
-        setRadioGroupListener(soalan19, "k");
-        setRadioGroupListener(soalan20, "k");
+        setRadioGroupListener(soalan1, 0);
+        setRadioGroupListener(soalan2, 1);
+        setRadioGroupListener(soalan3, 2);
+        setRadioGroupListener(soalan4, 3);
+        setRadioGroupListener(soalan5, 4);
+        setRadioGroupListener(soalan6, 5);
+        setRadioGroupListener(soalan7, 6);
+        setRadioGroupListener(soalan8, 7);
+        setRadioGroupListener(soalan9, 8);
+        setRadioGroupListener(soalan10, 9);
+        setRadioGroupListener(soalan11, 10);
+        setRadioGroupListener(soalan12, 11);
+        setRadioGroupListener(soalan13, 12);
+        setRadioGroupListener(soalan14, 13);
+        setRadioGroupListener(soalan15, 14);
+        setRadioGroupListener(soalan16, 15);
+        setRadioGroupListener(soalan17, 16);
+        setRadioGroupListener(soalan18, 17);
+        setRadioGroupListener(soalan19, 18);
+        setRadioGroupListener(soalan20, 19);
 
         submitButton = findViewById(R.id.submitButton);
+        submitButton.setBackgroundResource(R.drawable.disabled_button);
+        submitButton.setEnabled(false);
 
         submitButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
@@ -69,18 +78,37 @@ public class bahagianF extends AppCompatActivity {
             startActivity(intent);
         });
     }
-    private void setRadioGroupListener(RadioGroup radioGroup, final String countVariable) {
+    private void setRadioGroupListener(RadioGroup radioGroup, final int questionIndex) {
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton radioButton = findViewById(checkedId);
             if (radioButton != null && radioButton.getText().toString().equals("Ya")) {
                 try {
-                    Field field = bahagianA.class.getDeclaredField(countVariable);
+                    Field field = bahagianA.class.getDeclaredField("k");
                     int count = (int) field.get(this);
                     count++;
                     field.set(this, count);
                 } catch (NoSuchFieldException | IllegalAccessException e) {
                     e.printStackTrace();
                 }
+            }
+            isQuestionAnswered[questionIndex] = true; // Mark the question as answered
+
+            // Check if all questions are answered
+            boolean allQuestionsAnswered = true;
+            for (boolean answered : isQuestionAnswered) {
+                if (!answered) {
+                    allQuestionsAnswered = false;
+                    break;
+                }
+            }
+
+            // Enable or disable the submit button based on whether all questions are answered
+            if (allQuestionsAnswered) {
+                submitButton.setBackgroundResource(R.drawable.enabled_button);
+                submitButton.setEnabled(true);
+            } else {
+                submitButton.setBackgroundResource(R.drawable.disabled_button);
+                submitButton.setEnabled(false);
             }
         });
     }
