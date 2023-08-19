@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainMenu extends AppCompatActivity {
+    private FirebaseAuth mAuth;
 
     public Button startButton;
 
@@ -18,6 +22,7 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.main_menu);
 
         startButton = findViewById(R.id.startButton);
+        mAuth = FirebaseAuth.getInstance();
 
         startButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
@@ -35,7 +40,9 @@ public class MainMenu extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_sign_out) {
-            // Perform sign-out logic here
+            startActivity(new Intent(MainMenu.this, MainActivity.class));
+            Toast.makeText(this, "User " + mAuth.getCurrentUser().getEmail() + " signed out.", Toast.LENGTH_LONG).show();
+            mAuth.signOut();
             return true;
         }
 
