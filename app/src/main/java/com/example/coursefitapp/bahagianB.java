@@ -2,6 +2,13 @@ package com.example.coursefitapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.coursefitapp.bahagianA.r;
+import static com.example.coursefitapp.bahagianA.i;
+import static com.example.coursefitapp.bahagianA.a;
+import static com.example.coursefitapp.bahagianA.s;
+import static com.example.coursefitapp.bahagianA.e;
+import static com.example.coursefitapp.bahagianA.k;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -80,14 +87,7 @@ public class bahagianB extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton radioButton = findViewById(checkedId);
             if (radioButton != null && radioButton.getText().toString().equals("Ya")) {
-                try {
-                    Field field = bahagianA.class.getDeclaredField("i");
-                    int count = (int) field.get(this);
-                    count++;
-                    field.set(this, count);
-                } catch (NoSuchFieldException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
+                i++;
             }
             isQuestionAnswered[questionIndex] = true; // Mark the question as answered
 

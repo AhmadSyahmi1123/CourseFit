@@ -1,21 +1,21 @@
 package com.example.coursefitapp;
 
-import static com.example.coursefitapp.bahagianA.a;
-import static com.example.coursefitapp.bahagianA.e;
-import static com.example.coursefitapp.bahagianA.i;
-import static com.example.coursefitapp.bahagianA.k;
-import static com.example.coursefitapp.bahagianA.r;
-import static com.example.coursefitapp.bahagianA.s;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,24 +25,42 @@ import java.util.Map;
 
 public class ResultHistory extends AppCompatActivity {
 
+    public TextView header;
+    db db = new db();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_history);
 
+        header = findViewById(R.id.headerText);
+        header.setText("Recent Result timestamp");
+
         // Get the container layout
         LinearLayout container = findViewById(R.id.containerHistory);
 
-        // Sample data (you can replace this with your data)
         List<ExpandableItem> expandableItems = new ArrayList<>();
-
         HashMap<String, Integer> hashMap = new HashMap<>();
-        hashMap.put("r", r);
-        hashMap.put("i", i);
-        hashMap.put("a", a);
-        hashMap.put("s", s);
-        hashMap.put("e", e);
-        hashMap.put("k", k);
+
+        db.Users.orderByChild(FirebaseAuth.getInstance().getCurrentUser().getEmail()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot Database) {
+                for (DataSnapshot snapshot : Database.getChildren()) {
+                    if (snapshot.child("points").exists()) {
+                        for (int in = 0; in <= 5; ) {
+                            String[] d = new String[]{"r", "i", "a", "s", "e", "k"};
+                            hashMap.put(d[in], Integer.parseInt(snapshot.child("points").child(d[in]).getValue(String.class)));
+
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.w("DB", "ErrorRead", error.toException());
+            }
+        });
 
         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
 

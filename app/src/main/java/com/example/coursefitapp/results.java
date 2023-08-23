@@ -7,24 +7,40 @@ import static com.example.coursefitapp.bahagianA.s;
 import static com.example.coursefitapp.bahagianA.e;
 import static com.example.coursefitapp.bahagianA.k;
 
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
+import java.lang.reflect.Array;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class results extends AppCompatActivity {
+    db db = new db();
+    public static String timestamp;
+    public TextView test;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +50,7 @@ public class results extends AppCompatActivity {
         // Get the container layout
         LinearLayout container = findViewById(R.id.container);
 
+        Toast.makeText(this, "R: " + r + "I: " + i + "A: " + a + "S: " + s + "E:" + e + "K:" + k, Toast.LENGTH_LONG).show();
         // Sample data (you can replace this with your data)
         List<ExpandableItem> expandableItems = new ArrayList<>();
 
@@ -45,13 +62,19 @@ public class results extends AppCompatActivity {
         hashMap.put("e", e);
         hashMap.put("k", k);
 
+        Log.d("DATA", hashMap.toString());
+
+        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        if (email != null) {
+            db.Users.child(email.toString().replace(".", "_dot_")).child("points").setValue(hashMap);
+        }
         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
 
         // Sort the entryList based on values in descending order
         Collections.sort(entryList, (entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
 
         // Get the top N highest numbers
-        int topN = 3;
+        int topN = 6;
         List<String> topNKeys = new ArrayList<>();
         for (int i = 0; i < Math.min(topN, entryList.size()); i++) {
             topNKeys.add(entryList.get(i).getKey());
@@ -1287,6 +1310,21 @@ public class results extends AppCompatActivity {
             descText.setOnClickListener(clickListener);
 
             container.addView(expandableItemView);
+        }
+    }
+
+    public class DateTimestampToString {
+        public static void main(String[] args) {
+            // Get the current date
+            LocalDate currentDate = LocalDate.now();
+
+            // Create a formatter to specify the desired date format with month name
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMMM-dd", Locale.ENGLISH);
+
+            // Format the date as a string with month name
+            timestamp = formatter.format(currentDate);
+
+
         }
     }
 }

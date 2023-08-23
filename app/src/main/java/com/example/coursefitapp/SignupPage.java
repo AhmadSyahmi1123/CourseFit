@@ -165,10 +165,10 @@ public class SignupPage extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d("Auth", "createUserWithEmail:success");
                             signIn(email.getText().toString(), password.getText().toString());
-                            String key = db.Users.push().getKey();
-                            db.saveData(key, "email", email.getText().toString());
-                            db.saveData(key, "username", username.getText().toString());
-                            db.saveData(key, "password", password.getText().toString());
+                            String key = email.getText().toString().replace(".", "_dot_");
+                            db.saveData(key, "email", null, email.getText().toString());
+                            db.saveData(key, "username", null, username.getText().toString());
+                            db.saveData(key, "password", null, password.getText().toString());
 
                             if (mAuth.getCurrentUser() != null) {
                                 startActivity(intent);

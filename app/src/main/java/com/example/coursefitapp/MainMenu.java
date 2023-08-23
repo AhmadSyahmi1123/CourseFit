@@ -14,19 +14,27 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainMenu extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
-    public Button startButton;
+    public Button startButton, historyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+        //Intent a = new Intent(MainMenu.this, results.class);
+        //startActivity(a);
 
         startButton = findViewById(R.id.startButton);
+        historyButton = findViewById(R.id.historyButton);
         mAuth = FirebaseAuth.getInstance();
 
         startButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
             Intent intent = new Intent(MainMenu.this, bahagianA.class);
+            startActivity(intent);
+        });
+        historyButton.setOnClickListener(v -> {
+            // This method will be called when the button is clicked
+            Intent intent = new Intent(MainMenu.this, ResultHistory.class);
             startActivity(intent);
         });
     }
