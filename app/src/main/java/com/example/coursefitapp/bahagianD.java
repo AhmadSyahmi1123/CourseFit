@@ -81,7 +81,7 @@ public class bahagianD extends AppCompatActivity {
             RadioButton radioButton = findViewById(checkedId);
             if (radioButton != null && radioButton.getText().toString().equals("Ya")) {
                 try {
-                    Field field = bahagianA.class.getDeclaredField("i");
+                    Field field = bahagianA.class.getDeclaredField("s");
                     int count = (int) field.get(this);
                     count++;
                     field.set(this, count);

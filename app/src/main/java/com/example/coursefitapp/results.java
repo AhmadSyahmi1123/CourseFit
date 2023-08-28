@@ -50,7 +50,7 @@ public class results extends AppCompatActivity {
         // Get the container layout
         LinearLayout container = findViewById(R.id.container);
 
-        Toast.makeText(this, "R: " + r + "I: " + i + "A: " + a + "S: " + s + "E:" + e + "K:" + k, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "R:" + r + " I:" + i + " A:" + a + " S:" + s + " E:" + e + " K:" + k, Toast.LENGTH_LONG).show();
         // Sample data (you can replace this with your data)
         List<ExpandableItem> expandableItems = new ArrayList<>();
 
@@ -74,7 +74,7 @@ public class results extends AppCompatActivity {
         Collections.sort(entryList, (entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
 
         // Get the top N highest numbers
-        int topN = 6;
+        int topN = 3;
         List<String> topNKeys = new ArrayList<>();
         for (int i = 0; i < Math.min(topN, entryList.size()); i++) {
             topNKeys.add(entryList.get(i).getKey());
