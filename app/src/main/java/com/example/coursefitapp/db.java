@@ -14,13 +14,7 @@ public class db {
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://coursefit-e05ca-default-rtdb.asia-southeast1.firebasedatabase.app/");
     DatabaseReference Users = database.getReference("Users");
 
-    public void saveData(String user, String path, String path2, String value) {
-        if (user != null) {
-            Users.child(user).child(path).setValue(value);
-        }
-        if (path2 != null) {
-            Users.child(path).child(path2).setValue(value);
-        }
+
     }
     /*
     public Boolean checkData(String data, String path) {
