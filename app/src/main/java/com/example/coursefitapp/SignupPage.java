@@ -3,10 +3,14 @@ package com.example.coursefitapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +28,7 @@ import java.util.regex.Pattern;
 
 public class SignupPage extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private TextView linkToSignIn;
     db db = new db();
     private EditText username;
     private EditText email;
@@ -38,6 +43,11 @@ public class SignupPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
 
+        linkToSignIn = findViewById(R.id.toSignInPageLink);
+        SpannableString spannableString = new SpannableString("Sign In");
+        spannableString.setSpan(new UnderlineSpan(), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        linkToSignIn.setText(spannableString);
+
         mAuth = FirebaseAuth.getInstance();
         username = findViewById(R.id.usernameInput);
         email = findViewById(R.id.emailInput);
@@ -45,7 +55,7 @@ public class SignupPage extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         //Button is disabled until all conditions are met
         nextButton.setEnabled(false);
-        nextButton.setBackgroundResource(R.drawable.disabled_button);
+        nextButton.setBackgroundResource(R.drawable.circular_button_bg_disabled);
 
         Intent intent = new Intent(SignupPage.this, MainMenu.class);
         if (mAuth.getCurrentUser() != null) {
@@ -150,9 +160,9 @@ public class SignupPage extends AppCompatActivity {
                 }
                 nextButton.setEnabled(cond1 && cond2 && cond3);
                 if (nextButton.isEnabled()) {
-                    nextButton.setBackgroundResource(R.drawable.enabled_button);
+                    nextButton.setBackgroundResource(R.drawable.circular_button_bg_enabled);
                 } else {
-                    nextButton.setBackgroundResource(R.drawable.disabled_button);
+                    nextButton.setBackgroundResource(R.drawable.circular_button_bg_disabled);
                 }
             }
         });
@@ -181,6 +191,10 @@ public class SignupPage extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                         }
                     });
+        });
+
+        linkToSignIn.setOnClickListener(v -> {
+            startActivity(new Intent(SignupPage.this, LoginPage.class));
         });
     }
 

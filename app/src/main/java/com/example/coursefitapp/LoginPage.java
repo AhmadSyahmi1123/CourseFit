@@ -34,7 +34,7 @@ public class LoginPage extends AppCompatActivity {
         setContentView(R.layout.login_page);
 
         mAuth = FirebaseAuth.getInstance();
-        username = findViewById(R.id.usernameInput);
+        username = findViewById(R.id.emailInput);
         password = findViewById(R.id.passwordInput);
 
         nextButton = findViewById(R.id.nextButton);
@@ -45,7 +45,7 @@ public class LoginPage extends AppCompatActivity {
             Toast.makeText(this, "Signed in as " + mAuth.getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
         }
 
-        nextButton.setBackgroundResource(R.drawable.disabled_button);
+        nextButton.setBackgroundResource(R.drawable.circular_button_bg_disabled);
         nextButton.setEnabled(false);
         username.addTextChangedListener(new TextWatcher() {
 
@@ -95,9 +95,9 @@ public class LoginPage extends AppCompatActivity {
                 }
                 nextButton.setEnabled(cond1 && cond2);
                 if (nextButton.isEnabled()) {
-                    nextButton.setBackgroundResource(R.drawable.enabled_button);
+                    nextButton.setBackgroundResource(R.drawable.circular_button_bg_enabled);
                 } else {
-                    nextButton.setBackgroundResource(R.drawable.disabled_button);
+                    nextButton.setBackgroundResource(R.drawable.circular_button_bg_disabled);
 
                 }
             }
@@ -117,7 +117,7 @@ public class LoginPage extends AppCompatActivity {
                                     password.setText(null);
                                     password.setError("Incorrect Password");
                                     nextButton.setEnabled(false);
-                                    nextButton.setBackgroundResource(R.drawable.disabled_button);
+                                    nextButton.setBackgroundResource(R.drawable.circular_button_bg_disabled);
                                 }
                             }
                         }
@@ -126,7 +126,7 @@ public class LoginPage extends AppCompatActivity {
                         password.setText(null);
                         username.setError("User not found.");
                         nextButton.setEnabled(false);
-                        nextButton.setBackgroundResource(R.drawable.disabled_button);
+                        nextButton.setBackgroundResource(R.drawable.circular_button_bg_disabled);
                     }
                 }
 

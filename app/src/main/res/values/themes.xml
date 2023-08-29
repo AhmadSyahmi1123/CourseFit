@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="White.Theme.CourseFitApp" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/white</item>
@@ -15,7 +15,6 @@
     <style name="Toolbar.CourseFitApp" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/pastelGreen</item>
     </style>
-
 
     <style name="Button.CourseFitApp" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/button_background</item>
