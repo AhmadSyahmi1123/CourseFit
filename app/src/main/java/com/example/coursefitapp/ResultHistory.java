@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class ResultHistory extends AppCompatActivity {
 
@@ -42,15 +43,15 @@ public class ResultHistory extends AppCompatActivity {
         List<ExpandableItem> expandableItems = new ArrayList<>();
         HashMap<String, Integer> hashMap = new HashMap<>();
 
-        db.Users.orderByChild(FirebaseAuth.getInstance().getCurrentUser().getEmail()).addValueEventListener(new ValueEventListener() {
+        db.Users.orderByChild(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot Database) {
                 for (DataSnapshot snapshot : Database.getChildren()) {
                     if (snapshot.child("points").exists()) {
                         for (int in = 0; in <= 5; ) {
                             String[] d = new String[]{"r", "i", "a", "s", "e", "k"};
-                            hashMap.put(d[in], Integer.parseInt(snapshot.child("points").child(d[in]).getValue(String.class)));
-
+                            hashMap.put(d[in], Integer.parseInt(Objects.requireNonNull(snapshot.child("points").child(d[in]).getValue(String.class))));
+                            in++;
                         }
                     }
                 }

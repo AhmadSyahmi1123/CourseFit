@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".SignupPage">
 
     <TextView
@@ -12,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:text="@string/signupButtonText"
-        android:textSize="34sp"
         android:textColor="@color/black"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -43,15 +44,15 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="208dp"
-        android:gravity="center_vertical"
-        android:paddingStart="12dp"
+        android:autofillHints="username"
         android:background="@drawable/edit_text_bg"
         android:drawableStart="@drawable/ic_baseline_person"
         android:drawablePadding="12dp"
-        android:autofillHints="username"
         android:ems="10"
+        android:gravity="center_vertical"
         android:hint="@string/usernameHint"
         android:inputType="text"
+        android:paddingStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,14 +63,14 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="336dp"
-        android:paddingStart="12dp"
+        android:autofillHints="password"
         android:background="@drawable/edit_text_bg"
         android:drawableStart="@drawable/ic_baseline_password"
         android:drawablePadding="12dp"
-        android:autofillHints="password"
         android:ems="10"
         android:hint="@string/passwordHint"
         android:inputType="textPassword"
+        android:paddingStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,18 +91,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circular_button_bg_enabled"
+        android:clickable="false"
+        android:progress="@integer/material_motion_duration_long_1"
+        android:progressBackgroundTint="#0076C6B8"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nextButton"
+        app:layout_constraintTop_toTopOf="@+id/nextButton"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="visible" />
+
     <Button
         android:id="@+id/nextButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="400dp"
+        android:background="@drawable/circular_button_bg_enabled"
         android:drawableStart="@drawable/baseline_navigate_next_24"
         android:paddingStart="19dp"
-        android:background="@drawable/circular_button_bg_enabled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"></Button>
+
+    <ImageView
+        android:id="@+id/warnError"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circular_button_bg_enabled"
+        android:foreground="@drawable/ic_error_outline"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/nextButton"
+        app:srcCompat="@drawable/circular_button_bg_enabled"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
