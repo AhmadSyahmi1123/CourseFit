@@ -11,7 +11,6 @@ import com.example.coursefitapp.databinding.MainMenuBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainMenu extends AppCompatActivity {
-    private FirebaseAuth mAuth;
 
     MainMenuBinding binding;
 
@@ -23,8 +22,6 @@ public class MainMenu extends AppCompatActivity {
         replaceFragment(new HomeFragment());
         //Intent a = new Intent(MainMenu.this, results.class);
         //startActivity(a);
-
-        mAuth = FirebaseAuth.getInstance();
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.home){
