@@ -24,12 +24,14 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -64,9 +66,10 @@ public class results extends AppCompatActivity {
 
         Log.d("DATA", hashMap.toString());
 
-        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-        if (email != null) {
-            db.Users.child(email.toString().replace(".", "_dot_")).child("points").setValue(hashMap);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        timestamp = String.valueOf(LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm ddMMyyyy"))).replace(" ", "_");
+        if (user != null) {
+            db.Users.child(user.getUid()).child(timestamp).child("points").setValue(hashMap);
         }
         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
 

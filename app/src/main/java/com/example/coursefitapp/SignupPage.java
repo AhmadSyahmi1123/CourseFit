@@ -50,7 +50,7 @@ public class SignupPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
 
-        linkToSignIn = findViewById(R.id.toSignInPageLink);
+        linkToSignIn = findViewById(R.id.toSignInLink);
         SpannableString spannableString = new SpannableString("Sign In");
         spannableString.setSpan(new UnderlineSpan(), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         linkToSignIn.setText(spannableString);
@@ -230,7 +230,7 @@ public class SignupPage extends AppCompatActivity {
         });
 
         linkToSignIn.setOnClickListener(v -> {
-            startActivity(new Intent(SignupPage.this, LoginPage.class));
+            startActivity(new Intent(SignupPage.this, MainActivity.class));
         });
     }
 
