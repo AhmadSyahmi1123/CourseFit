@@ -1,12 +1,28 @@
 package com.example.coursefitapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +30,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HistoryFragment extends Fragment {
+
+    View view;
+
+    public FirebaseAuth mAuth;
+    db db = new db();
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,14 +73,67 @@ public class HistoryFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        view = inflater.inflate(R.layout.fragment_history, container, false);
+        mAuth = FirebaseAuth.getInstance();
+        String uid = mAuth.getCurrentUser().getUid();
+        ArrayList<String> dataList = new ArrayList<>(); // Change to ArrayList<String>
+
+        // Create a reference to the RecyclerView in your XML layout
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewSessions);
+
+        // Create an instance of your custom adapter and set it on the RecyclerView
+        SessionAdapter adapter = new SessionAdapter(dataList, new SessionAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(String sessionData) {
+                // Handle the click event on a session card here
+                // 'sessionData' contains the data for the clicked session
+            }
+        });
+
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        db.Users.child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    int sessionCount = 1; // Initialize session count
+                    for (DataSnapshot pointsData : snapshot.child("points").getChildren()) {
+                        // Check if the key exists under "points"
+                        if (pointsData.exists()) {
+                            try {
+                                String timestamp = pointsData.child("timestamp")
+                                        .getValue(String.class);
+
+                                if (timestamp != null) {
+                                    timestamp = timestamp.replace("_", " ").replace("-", "/");
+                                    String formattedSessionData = "Session " + sessionCount + " - " + timestamp;
+                                    dataList.add(formattedSessionData);
+                                    Log.d("DATAHF", dataList + "\n" + timestamp);
+                                    adapter.notifyDataSetChanged(); // Notify the adapter of the data change
+                                    sessionCount++;
+                                } else {
+                                    Log.d("DATAHF", "Timestamp is null");
+                                }
+                            } catch (NumberFormatException e) {
+                                Log.d("DATAHF", "ERR: " + e);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.d("DATAHF", error.toString());
+            }
+        });
+        return view;
     }
 }

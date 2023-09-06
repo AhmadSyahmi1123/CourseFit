@@ -67,9 +67,11 @@ public class results extends AppCompatActivity {
         Log.d("DATA", hashMap.toString());
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        timestamp = String.valueOf(LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm ddMMyyyy"))).replace(" ", "_");
+        timestamp = String.valueOf(LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm dd-MM-yyyy"))).replace(" ", "_");
         if (user != null) {
-            db.Users.child(user.getUid()).child(timestamp).child("points").setValue(hashMap);
+            db.Users.child(user.getUid()).child("points").child(timestamp).setValue(hashMap);
+            db.Users.child(user.getUid()).child("points").child(timestamp).child("timestamp").setValue(timestamp);
+
         }
         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
 
