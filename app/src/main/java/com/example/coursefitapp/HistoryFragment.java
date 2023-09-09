@@ -142,7 +142,7 @@ public class HistoryFragment extends Fragment {
                     // Create formatted data list after sorting
                     formattedDataList.clear();
                     for (int i = 0; i < timestamps.size(); i++) {
-                        String formattedSessionData = "Session " + (i + 1) + " - " + timestamps.get(i);
+                        String formattedSessionData = "Session " + (i + 1) + " - " + timestamps.get(i).replace("_"," ").replace("-","/");
                         formattedDataList.add(formattedSessionData);
                     }
 
@@ -154,7 +154,7 @@ public class HistoryFragment extends Fragment {
             }
 
             private void sortDataByTimestamp(ArrayList<String> timestamps, ArrayList<HashMap> sessionDataList) {
-                SimpleDateFormat format = new SimpleDateFormat("HH:mm_dd-MM-yyyy");
+                SimpleDateFormat format = new SimpleDateFormat("HH:mm dd/MM/yyyy");
 
                 for (int i = 0; i < timestamps.size() - 1; i++) {
                     for (int j = i + 1; j < timestamps.size(); j++) {
