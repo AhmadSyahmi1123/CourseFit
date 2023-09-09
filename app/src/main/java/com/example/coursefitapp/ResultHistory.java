@@ -39,9 +39,6 @@ public class ResultHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_history);
 
-        header = findViewById(R.id.headerText);
-        header.setText("History Results");
-
         // Get the container layout
         LinearLayout container = findViewById(R.id.containerHistory);
 
@@ -51,6 +48,10 @@ public class ResultHistory extends AppCompatActivity {
         // Inside YourNewActivity.onCreate() or another relevant method
         Intent intent = getIntent();
         int sessionPosition = intent.getIntExtra("SessionPosition", -1);
+
+        header = findViewById(R.id.headerText);
+        String header_text = getString(R.string.session_header_text, sessionPosition+1);
+        header.setText(header_text);
 
         if (sessionPosition != -1) {
             // Retrieve the dataList from HistoryFragment (assuming dataList is a public static variable)

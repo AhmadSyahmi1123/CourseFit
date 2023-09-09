@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
-        email = findViewById(R.id.emailInput);
+        TextInputLayout emailInputLayout = findViewById(R.id.emailInput);
+        EditText email = emailInputLayout.getEditText();
         TextInputLayout passwordInputLayout = findViewById(R.id.passwordInput);
         EditText password = passwordInputLayout.getEditText();
         progress = findViewById(R.id.progressBar);

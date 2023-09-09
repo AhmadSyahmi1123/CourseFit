@@ -20,45 +20,59 @@
         android:textStyle="bold"
         />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/emailInput"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
         android:layout_below="@id/usernameInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:autofillHints="username"
-        android:background="@drawable/edit_text_bg"
-        android:drawableStart="@drawable/ic_baseline_email"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="@string/emailHint"
         android:textColorHint="#696666"
-        android:textColor="@color/white"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        />
+        android:textColor="@color/white">
 
-    <EditText
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="username"
+            android:background="@drawable/edit_text_bg"
+            android:drawableStart="@drawable/ic_baseline_email"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/emailHint"
+            android:textColorHint="#696666"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/usernameInput"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:autofillHints="username"
-        android:background="@drawable/edit_text_bg"
-        android:drawableStart="@drawable/ic_baseline_person"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="@string/usernameHint"
         android:textColorHint="#696666"
-        android:textColor="@color/white"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        />
+        android:textColor="@color/white">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="username"
+            android:background="@drawable/edit_text_bg"
+            android:drawableStart="@drawable/ic_baseline_person"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/usernameHint"
+            android:textColorHint="#696666"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"

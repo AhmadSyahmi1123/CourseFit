@@ -18,24 +18,30 @@
         android:textColor="@color/white"
         android:layout_centerHorizontal="true" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/emailInput"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:autofillHints="username"
-        android:background="@drawable/edit_text_bg"
-        android:drawableStart="@drawable/ic_baseline_email"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="@string/emailHint"
-        android:textColorHint="#696666"
-        android:textColor="@color/white"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"/>
+        android:textColorHint="#696666">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:autofillHints="username"
+            android:background="@drawable/edit_text_bg"
+            android:drawableStart="@drawable/ic_baseline_email"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/emailHint"
+            android:textColorHint="#696666"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"

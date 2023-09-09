@@ -78,8 +78,10 @@ public class SignupPage extends AppCompatActivity {
         linkToSignIn.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
 
         mAuth = FirebaseAuth.getInstance();
-        username = findViewById(R.id.usernameInput);
-        email = findViewById(R.id.emailInput);
+        TextInputLayout usernameInputLayout = findViewById(R.id.usernameInput);
+        EditText username = usernameInputLayout.getEditText();
+        TextInputLayout emailInputLayout = findViewById(R.id.emailInput);
+        EditText email = emailInputLayout.getEditText();
         TextInputLayout passwordInputLayout = findViewById(R.id.passwordInput);
         EditText password = passwordInputLayout.getEditText();
         nextButton = findViewById(R.id.nextButton);

@@ -118,7 +118,6 @@ public class HistoryFragment extends Fragment {
                     ArrayList<String> timestamps = new ArrayList<>();
                     ArrayList<HashMap> sessionDataList = new ArrayList<>();
 
-                    int sessionCount = 1; // Initialize session count
                     for (DataSnapshot pointsData : snapshot.child("points").getChildren()) {
                         // Check if the key exists under "points"
                         if (pointsData.exists()) {
@@ -128,7 +127,6 @@ public class HistoryFragment extends Fragment {
                                 if (timestamp != null) {
                                     timestamps.add(timestamp);
                                     sessionDataList.add(data);
-                                    sessionCount++;
                                 } else {
                                     Log.d("DATAHF", "Timestamp is null");
                                 }
