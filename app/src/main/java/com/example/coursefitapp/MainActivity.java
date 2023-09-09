@@ -1,5 +1,6 @@
 package com.example.coursefitapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.ClickableSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,19 +52,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         email = findViewById(R.id.emailInput);
-        password = findViewById(R.id.passwordInput);
+        TextInputLayout passwordInputLayout = findViewById(R.id.passwordInput);
+        EditText password = passwordInputLayout.getEditText();
         progress = findViewById(R.id.progressBar);
         warnError = findViewById(R.id.warnError);
 
         nextButton = findViewById(R.id.nextButton);
         linkToSignUp = findViewById(R.id.toSignUpLink);
-        SpannableString spannableString = new SpannableString("Sign Up");
-        spannableString.setSpan(new UnderlineSpan(), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        SpannableString spannableString = new SpannableString(linkToSignUp.getText());
+        spannableString.setSpan(new UnderlineSpan(), 23, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         linkToSignUp.setText(spannableString);
 
-        linkToSignUp.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, SignupPage.class));
-        });
+        // Create a ClickableSpan for the clickable part of text
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                // Handle the click action here, e.g., navigate to another activity
+                Intent intent = new Intent(MainActivity.this, SignupPage.class);
+                startActivity(intent);
+            }
+        };
+
+        // Set the ClickableSpan for the specific portion of text
+        spannableString.setSpan(clickableSpan, 23, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Set the modified SpannableString to the TextView
+        linkToSignUp.setText(spannableString);
+
+        // Make sure links are clickable
+        linkToSignUp.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
 
         Intent intent = new Intent(MainActivity.this, MainMenu.class);
         if (mAuth.getCurrentUser() != null) {

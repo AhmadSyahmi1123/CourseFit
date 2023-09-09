@@ -1,5 +1,7 @@
 package com.example.coursefitapp;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,10 +57,14 @@ public class SessionAdapter extends RecyclerView.Adapter<SessionAdapter.SessionV
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
-                        clickListener.onItemClick(dataList.get(position));
+                        // Pass 'position' to the new activity to identify the clicked session
+                        Intent intent = new Intent(itemView.getContext(), ResultHistory.class);
+                        intent.putExtra("SessionPosition", position);
+                        itemView.getContext().startActivity(intent);
                     }
                 }
             });
+
         }
 
         public void bind(String sessionData) {

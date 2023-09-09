@@ -19,9 +19,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
+import org.checkerframework.checker.units.qual.A;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -73,8 +76,12 @@ public class HistoryFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
+
+    public HashMap data;
+    public static ArrayList dataList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,13 +89,15 @@ public class HistoryFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_history, container, false);
         mAuth = FirebaseAuth.getInstance();
         String uid = mAuth.getCurrentUser().getUid();
-        ArrayList<String> dataList = new ArrayList<>(); // Change to ArrayList<String>
+        ArrayList<String> formattedDataList = new ArrayList<>();
+        data = new HashMap<>();
+        dataList = new ArrayList();
 
         // Create a reference to the RecyclerView in your XML layout
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewSessions);
 
         // Create an instance of your custom adapter and set it on the RecyclerView
-        SessionAdapter adapter = new SessionAdapter(dataList, new SessionAdapter.OnItemClickListener() {
+        SessionAdapter adapter = new SessionAdapter(formattedDataList, new SessionAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(String sessionData) {
                 // Handle the click event on a session card here
@@ -110,11 +119,13 @@ public class HistoryFragment extends Fragment {
                             try {
                                 String timestamp = pointsData.child("timestamp")
                                         .getValue(String.class);
-
+                                data = (HashMap) pointsData.getValue();
                                 if (timestamp != null) {
                                     timestamp = timestamp.replace("_", " ").replace("-", "/");
                                     String formattedSessionData = "Session " + sessionCount + " - " + timestamp;
-                                    dataList.add(formattedSessionData);
+                                    formattedDataList.add(formattedSessionData);
+                                    data.remove("timestamp");
+                                    dataList.add(data);
                                     Log.d("DATAHF", dataList + "\n" + timestamp);
                                     adapter.notifyDataSetChanged(); // Notify the adapter of the data change
                                     sessionCount++;
@@ -134,6 +145,10 @@ public class HistoryFragment extends Fragment {
                 Log.d("DATAHF", error.toString());
             }
         });
+        Log.d("TEST", dataList.toString());
+
         return view;
     }
+
+
 }

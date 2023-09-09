@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/bgColor">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,17 +27,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -55,17 +60,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -84,17 +93,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -113,17 +126,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -142,17 +159,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -171,17 +192,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -200,17 +225,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -229,17 +258,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -258,17 +291,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -287,17 +324,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -316,17 +357,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -345,17 +390,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -374,17 +423,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -403,17 +456,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -432,17 +489,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -461,17 +522,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -490,17 +555,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -519,17 +588,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -548,17 +621,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -577,30 +654,53 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/yaText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
 
             <RadioButton
+                android:buttonTint="@drawable/custom_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tidakText"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:padding="8dp" />
         </RadioGroup>
 
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:padding="8dp"
-            android:text="@string/submitText"
-            android:textSize="16sp"
-            android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
 
-        </Button>
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:padding="8dp"
+                android:text="Previous"
+                android:textSize="16sp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:padding="8dp"
+                android:text="@string/submitText"
+                android:textSize="16sp"
+                android:layout_gravity="center">
+
+            </Button>
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

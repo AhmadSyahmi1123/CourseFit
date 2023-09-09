@@ -27,6 +27,7 @@ public class SettingsActivity extends AppCompatActivity {
             setPreferencesFromResource(R.xml.settings_page, rootKey);
             Preference signOutPreference = findPreference("pref_key_sign_out");
 
+
             signOutPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {

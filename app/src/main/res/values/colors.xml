@@ -4,4 +4,19 @@
     <color name="pastelGreenDark">#76C6B8</color>
     <color name="black">#000000</color>
     <color name="darkGray">#666666</color>
+    <color name="bgColor">#15153D</color>
+    <color name="gradientFront">#004AAD </color>
+    <color name="gradientBack">#7626BB </color>
+    <color name="buttonEnabledColorFront">#2E2E85 </color>
+    <color name="buttonEnabledColorEnd">#625194 </color>
+    <color name="buttonDisabledColorFront">#696666 </color>
+    <color name="buttonDisabledColorEnd">#5A4B87 </color>
+    <color name="buttonStartFront">#2E2E85 </color>
+    <color name="buttonStartEnd">#625194 </color>
+    <color name="bottomNav">#412297</color>
+    <color name="boxResultFront">#4826A6 </color>
+    <color name="boxResultENd">#BA84E1 </color>
+    <color name="editTextBG">#5A4B87 </color>
+    <color name="iconColor">#696666 </color>
+
 </resources>

@@ -14,6 +14,7 @@ import java.util.Arrays;
 public class bahagianF extends AppCompatActivity {
 
     public Button submitButton;
+    public Button prevButton;
     boolean[] isQuestionAnswered = new boolean[20]; // Assuming you have 20 questions
 
     @Override
@@ -69,12 +70,22 @@ public class bahagianF extends AppCompatActivity {
         setRadioGroupListener(soalan20, 19);
 
         submitButton = findViewById(R.id.submitButton);
-        submitButton.setBackgroundResource(R.drawable.disabled_button);
+        submitButton.setBackgroundResource(R.drawable.button_bg_disabled);
         submitButton.setEnabled(false);
 
         submitButton.setOnClickListener(v -> {
             // This method will be called when the button is clicked
             Intent intent = new Intent(bahagianF.this, results.class);
+            startActivity(intent);
+        });
+
+        prevButton = findViewById(R.id.prevButton);
+        prevButton.setBackgroundResource(R.drawable.button_bg_enabled);
+        prevButton.setEnabled(true);
+
+        prevButton.setOnClickListener(v -> {
+            // This method will be called when the button is clicked
+            Intent intent = new Intent(bahagianF.this, bahagianE.class);
             startActivity(intent);
         });
     }
@@ -104,10 +115,10 @@ public class bahagianF extends AppCompatActivity {
 
             // Enable or disable the submit button based on whether all questions are answered
             if (allQuestionsAnswered) {
-                submitButton.setBackgroundResource(R.drawable.enabled_button);
+                submitButton.setBackgroundResource(R.drawable.button_bg_enabled);
                 submitButton.setEnabled(true);
             } else {
-                submitButton.setBackgroundResource(R.drawable.disabled_button);
+                submitButton.setBackgroundResource(R.drawable.button_bg_disabled);
                 submitButton.setEnabled(false);
             }
         });

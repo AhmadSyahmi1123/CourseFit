@@ -3,24 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="60dp">
 
     <!-- Header -->
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
-        app:contentPadding="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp"
+        >
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="History"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/cardview_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -28,10 +38,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSessions"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="643dp"
         android:layout_weight="1"
-        android:padding="16dp"
+        android:clipChildren="false"
         android:clipToPadding="false"
-        android:clipChildren="false" />
+        android:padding="16dp" />
 
 </LinearLayout>

@@ -1,13 +1,16 @@
 package com.example.coursefitapp;
 
+import com.example.coursefitapp.HistoryFragment;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,53 +31,85 @@ public class ResultHistory extends AppCompatActivity {
 
     public TextView header;
     db db = new db();
-
+    public HashMap hashMap;
+    public Button backToMainMenuButton;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_history);
 
+
         header = findViewById(R.id.headerText);
-        header.setText("Recent Result timestamp");
+        header.setText("History Results");
 
         // Get the container layout
         LinearLayout container = findViewById(R.id.containerHistory);
 
         List<ExpandableItem> expandableItems = new ArrayList<>();
-        HashMap<String, Integer> hashMap = new HashMap<>();
-
-        db.Users.orderByChild(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot Database) {
-                for (DataSnapshot snapshot : Database.getChildren()) {
-                    if (snapshot.child("points").exists()) {
-                        for (int in = 0; in <= 5; ) {
-                            String[] d = new String[]{"r", "i", "a", "s", "e", "k"};
-                            hashMap.put(d[in], Integer.parseInt(Objects.requireNonNull(snapshot.child("points").child(d[in]).getValue(String.class))));
-                            in++;
-                        }
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.w("DB", "ErrorRead", error.toException());
-            }
-        });
-
-        List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
-
-        // Sort the entryList based on values in descending order
-        Collections.sort(entryList, (entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
-
-        // Get the top N highest numbers
-        int topN = 3;
         List<String> topNKeys = new ArrayList<>();
-        for (int i = 0; i < Math.min(topN, entryList.size()); i++) {
-            topNKeys.add(entryList.get(i).getKey());
+//
+//        // Inside YourNewActivity.onCreate() or another relevant method
+//        intent = getIntent();
+//        int sessionPosition = intent.getIntExtra("SessionPosition", -1);
+//
+//        ArrayList<Object> dataList = HistoryFragment.dataList;
+//        if (sessionPosition != -1) {
+//            hashMap = (HashMap) dataList.get(sessionPosition);
+//            Log.d("TEST", hashMap.toString()); //output: {a=8, r=5, s=10, e=9, i=8, k=10}
+//        }
+//        List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
+//
+//        // Sort the entryList based on values in descending order
+//        Collections.sort(entryList, (entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
+
+        // Inside YourNewActivity.onCreate() or another relevant method
+        Intent intent = getIntent();
+        int sessionPosition = intent.getIntExtra("SessionPosition", -1);
+
+        if (sessionPosition != -1) {
+            // Retrieve the dataList from HistoryFragment (assuming dataList is a public static variable)
+            ArrayList<HashMap<String, Number>> dataList = HistoryFragment.dataList;
+            Log.d("TEST", "Pos: " + String.valueOf(sessionPosition));
+
+            if (sessionPosition < dataList.size()) {
+                HashMap<String, Number> hashMap = dataList.get(sessionPosition);
+                // Log the original hashMap
+                Log.d("TEST", "Pos: " + sessionPosition);
+                Log.d("TEST", "dataList: " + dataList);
+
+                // Convert the hashMap entries to a list for sorting
+                List<Map.Entry<String, Number>> entryList = new ArrayList<>(hashMap.entrySet());
+
+                // Sort the entryList based on values in descending order
+                Collections.sort(entryList, (entry1, entry2) -> {
+                    Number value1 = entry1.getValue();
+                    Number value2 = entry2.getValue();
+                    if (value1 instanceof Long && value2 instanceof Long) {
+                        return Long.compare((Long) value2, (Long) value1);
+                    } else if (value1 instanceof Integer && value2 instanceof Integer) {
+                        return Integer.compare((Integer) value2, (Integer) value1);
+                    } else {
+                        // Handle other Number types here if needed
+                        return 0;
+                    }
+                });
+
+                // Log the sorted entryList
+                for (Map.Entry<String, Number> entry : entryList) {
+                    Log.d("SORTED", entry.getKey() + ": " + entry.getValue());
+                }
+                for (int i = 0; i < Math.min(3, entryList.size()); i++) {
+                    topNKeys.add(entryList.get(i).getKey());
+                }
+            } else {
+                Log.d("ERROR", "Session position out of bounds");
+            }
+        } else {
+            Log.d("ERROR", "Invalid session position");
         }
 
+        Log.d("TEST", topNKeys.toString());
         if (topNKeys.contains("r")) {
             expandableItems.add(new ExpandableItem("Mechanical Engineering", "Bertumpu pada reka bentuk, menganalisis, dan mengekalkan sistem mekanikal dan jentera.\n\nFocuses on designing, analyzing, and maintaining mechanical systems and machinery.\n\nBerikut merupakan senarai universiti yang menawarkan kursus ini:\n" + "Below is the list of universities that offers this course:\n" + "\n" +
                     "-University of Malaya (UM)\n" +
@@ -1270,6 +1305,12 @@ public class ResultHistory extends AppCompatActivity {
                     "-Universiti Utara Malaysia (UUM)\n" +
                     "-Universiti Malaysia Terengganu (UMT)"));
         }
+
+        backToMainMenuButton = findViewById(R.id.backToMainMenuButton);
+        backToMainMenuButton.setOnClickListener(v -> {
+            // This method will be called when the button is clicked
+            startActivity(new Intent(ResultHistory.this, MainMenu.class));
+        });
 
         // Inflate and add each expandable item
         for (ExpandableItem item : expandableItems) {

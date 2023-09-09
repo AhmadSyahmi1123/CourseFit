@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@color/bgColor">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="250dp"
-        android:text="Home Fragment"
-        android:textSize="26sp" />
+    <ImageView
+        android:id="@+id/titleImage"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        app:srcCompat="@drawable/title_image" />
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="300dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/titleImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="32dp"
+        android:background="@drawable/start_button_bg"
         android:text="@string/startButtonText">
 
     </Button>
 
-</FrameLayout>
+</RelativeLayout>

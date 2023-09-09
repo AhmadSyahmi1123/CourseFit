@@ -13,6 +13,7 @@ import java.lang.reflect.Field;
 public class bahagianA extends AppCompatActivity {
 
     public Button nextButton;
+    public Button prevButton;
     public static int r, i, a, s, e, k = 0;
     boolean[] isQuestionAnswered = new boolean[20]; // Assuming you have 20 questions
 
@@ -68,7 +69,7 @@ public class bahagianA extends AppCompatActivity {
         setRadioGroupListener(soalan20, 19);
 
         nextButton = findViewById(R.id.nextButton);
-        nextButton.setBackgroundResource(R.drawable.disabled_button);
+        nextButton.setBackgroundResource(R.drawable.button_bg_disabled);
         nextButton.setEnabled(false);
 
         nextButton.setOnClickListener(v -> {
@@ -76,6 +77,17 @@ public class bahagianA extends AppCompatActivity {
             Intent intent = new Intent(bahagianA.this, bahagianB.class);
             startActivity(intent);
         });
+
+        prevButton = findViewById(R.id.prevButton);
+        prevButton.setBackgroundResource(R.drawable.button_bg_enabled);
+        prevButton.setEnabled(true);
+
+        prevButton.setOnClickListener(v -> {
+            // This method will be called when the button is clicked
+            Intent intent = new Intent(bahagianA.this, MainMenu.class);
+            startActivity(intent);
+        });
+
     }
     private void setRadioGroupListener(RadioGroup radioGroup, final int questionIndex) {
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
@@ -103,10 +115,10 @@ public class bahagianA extends AppCompatActivity {
 
             // Enable or disable the submit button based on whether all questions are answered
             if (allQuestionsAnswered) {
-                nextButton.setBackgroundResource(R.drawable.enabled_button);
+                nextButton.setBackgroundResource(R.drawable.button_bg_enabled);
                 nextButton.setEnabled(true);
             } else {
-                nextButton.setBackgroundResource(R.drawable.disabled_button);
+                nextButton.setBackgroundResource(R.drawable.button_bg_disabled);
                 nextButton.setEnabled(false);
             }
         });

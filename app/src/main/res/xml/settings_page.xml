@@ -4,7 +4,6 @@
     <Preference
         android:key="pref_key_sign_out"
         android:title="Sign Out"
-        android:summary="Sign out from your account"
-        android:icon="@drawable/ic_baseline_logout"/>
+        android:icon="@drawable/ic_baseline_logout" />
 
 </PreferenceScreen>

@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.ClickableSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.View;
@@ -17,9 +18,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -51,14 +54,34 @@ public class SignupPage extends AppCompatActivity {
         setContentView(R.layout.signup_page);
 
         linkToSignIn = findViewById(R.id.toSignInLink);
-        SpannableString spannableString = new SpannableString("Sign In");
-        spannableString.setSpan(new UnderlineSpan(), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        SpannableString spannableString = new SpannableString(linkToSignIn.getText());
+        spannableString.setSpan(new UnderlineSpan(), 17, 24, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         linkToSignIn.setText(spannableString);
+
+        // Create a ClickableSpan for the clickable part of text
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                // Handle the click action here, e.g., navigate to another activity
+                Intent intent = new Intent(SignupPage.this, MainActivity.class);
+                startActivity(intent);
+            }
+        };
+
+        // Set the ClickableSpan for the specific portion of text
+        spannableString.setSpan(clickableSpan, 17, 24, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Set the modified SpannableString to the TextView
+        linkToSignIn.setText(spannableString);
+
+        // Make sure links are clickable
+        linkToSignIn.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
 
         mAuth = FirebaseAuth.getInstance();
         username = findViewById(R.id.usernameInput);
         email = findViewById(R.id.emailInput);
-        password = findViewById(R.id.passwordInput);
+        TextInputLayout passwordInputLayout = findViewById(R.id.passwordInput);
+        EditText password = passwordInputLayout.getEditText();
         nextButton = findViewById(R.id.nextButton);
         progress = findViewById(R.id.progressBar);
         warnError = findViewById(R.id.warnError);
