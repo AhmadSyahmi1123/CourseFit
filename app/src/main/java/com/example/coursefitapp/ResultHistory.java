@@ -39,7 +39,6 @@ public class ResultHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_history);
 
-
         header = findViewById(R.id.headerText);
         header.setText("History Results");
 
@@ -48,20 +47,6 @@ public class ResultHistory extends AppCompatActivity {
 
         List<ExpandableItem> expandableItems = new ArrayList<>();
         List<String> topNKeys = new ArrayList<>();
-//
-//        // Inside YourNewActivity.onCreate() or another relevant method
-//        intent = getIntent();
-//        int sessionPosition = intent.getIntExtra("SessionPosition", -1);
-//
-//        ArrayList<Object> dataList = HistoryFragment.dataList;
-//        if (sessionPosition != -1) {
-//            hashMap = (HashMap) dataList.get(sessionPosition);
-//            Log.d("TEST", hashMap.toString()); //output: {a=8, r=5, s=10, e=9, i=8, k=10}
-//        }
-//        List<Map.Entry<String, Integer>> entryList = new ArrayList<>(hashMap.entrySet());
-//
-//        // Sort the entryList based on values in descending order
-//        Collections.sort(entryList, (entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
 
         // Inside YourNewActivity.onCreate() or another relevant method
         Intent intent = getIntent();
@@ -83,15 +68,22 @@ public class ResultHistory extends AppCompatActivity {
 
                 // Sort the entryList based on values in descending order
                 Collections.sort(entryList, (entry1, entry2) -> {
-                    Number value1 = entry1.getValue();
-                    Number value2 = entry2.getValue();
-                    if (value1 instanceof Long && value2 instanceof Long) {
-                        return Long.compare((Long) value2, (Long) value1);
-                    } else if (value1 instanceof Integer && value2 instanceof Integer) {
-                        return Integer.compare((Integer) value2, (Integer) value1);
+                    Object value1 = entry1.getValue();
+                    Object value2 = entry2.getValue();
+
+                    if (value1 instanceof Number && value2 instanceof Number) {
+                        // Both values are numbers, so compare them
+                        if (value1 instanceof Long && value2 instanceof Long) {
+                            return Long.compare((Long) value2, (Long) value1);
+                        } else if (value1 instanceof Integer && value2 instanceof Integer) {
+                            return Integer.compare((Integer) value2, (Integer) value1);
+                        } else {
+                            // Handle other Number types here if needed
+                            return 0;
+                        }
                     } else {
-                        // Handle other Number types here if needed
-                        return 0;
+                        // Handle the case where one or both values are not numeric
+                        return 0; // You can change this to define your own comparison logic
                     }
                 });
 

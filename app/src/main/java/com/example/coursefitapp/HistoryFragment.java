@@ -21,8 +21,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.checkerframework.checker.units.qual.A;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -112,22 +115,19 @@ public class HistoryFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
+                    ArrayList<String> timestamps = new ArrayList<>();
+                    ArrayList<HashMap> sessionDataList = new ArrayList<>();
+
                     int sessionCount = 1; // Initialize session count
                     for (DataSnapshot pointsData : snapshot.child("points").getChildren()) {
                         // Check if the key exists under "points"
                         if (pointsData.exists()) {
                             try {
-                                String timestamp = pointsData.child("timestamp")
-                                        .getValue(String.class);
+                                String timestamp = pointsData.child("timestamp").getValue(String.class);
                                 data = (HashMap) pointsData.getValue();
                                 if (timestamp != null) {
-                                    timestamp = timestamp.replace("_", " ").replace("-", "/");
-                                    String formattedSessionData = "Session " + sessionCount + " - " + timestamp;
-                                    formattedDataList.add(formattedSessionData);
-                                    data.remove("timestamp");
-                                    dataList.add(data);
-                                    Log.d("DATAHF", dataList + "\n" + timestamp);
-                                    adapter.notifyDataSetChanged(); // Notify the adapter of the data change
+                                    timestamps.add(timestamp);
+                                    sessionDataList.add(data);
                                     sessionCount++;
                                 } else {
                                     Log.d("DATAHF", "Timestamp is null");
@@ -135,6 +135,51 @@ public class HistoryFragment extends Fragment {
                             } catch (NumberFormatException e) {
                                 Log.d("DATAHF", "ERR: " + e);
                             }
+                        }
+                    }
+
+                    // Sort timestamps and sessionDataList in ascending order
+                    sortDataByTimestamp(timestamps, sessionDataList);
+
+                    // Create formatted data list after sorting
+                    formattedDataList.clear();
+                    for (int i = 0; i < timestamps.size(); i++) {
+                        String formattedSessionData = "Session " + (i + 1) + " - " + timestamps.get(i);
+                        formattedDataList.add(formattedSessionData);
+                    }
+
+                    // Set the sorted data in the adapter
+                    dataList.clear();
+                    dataList.addAll(sessionDataList);
+                    adapter.notifyDataSetChanged();
+                }
+            }
+
+            private void sortDataByTimestamp(ArrayList<String> timestamps, ArrayList<HashMap> sessionDataList) {
+                SimpleDateFormat format = new SimpleDateFormat("HH:mm_dd-MM-yyyy");
+
+                for (int i = 0; i < timestamps.size() - 1; i++) {
+                    for (int j = i + 1; j < timestamps.size(); j++) {
+                        String timestamp1 = timestamps.get(i);
+                        String timestamp2 = timestamps.get(j);
+
+                        try {
+                            Date date1 = format.parse(timestamp1);
+                            Date date2 = format.parse(timestamp2);
+
+                            if (date1 != null && date2 != null && date1.after(date2)) {
+                                // Swap timestamps
+                                String tempTimestamp = timestamps.get(i);
+                                timestamps.set(i, timestamps.get(j));
+                                timestamps.set(j, tempTimestamp);
+
+                                // Swap session data
+                                HashMap tempData = sessionDataList.get(i);
+                                sessionDataList.set(i, sessionDataList.get(j));
+                                sessionDataList.set(j, tempData);
+                            }
+                        } catch (ParseException e) {
+                            Log.e("SORT_TIMESTAMP_ERROR", "Error parsing timestamps: " + e.getMessage());
                         }
                     }
                 }
